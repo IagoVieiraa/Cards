@@ -53,6 +53,7 @@ defmodule Deck do
 
   """
   def deal(deck, hand_size) do
+    Logger.info("Dealing the cards")
     Enum.split(deck, hand_size)
   end
 
