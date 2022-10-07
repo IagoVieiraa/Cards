@@ -3,7 +3,7 @@ defmodule Deck do
      Provides methods for creating and hadling a deck of cards
   """
 
-  require logger
+  require Logger
 
   def new() do
     values = [
@@ -30,6 +30,7 @@ defmodule Deck do
   end
 
   def shuffle(deck) do
+    Logger.info("Shuffling the deck")
     Enum.shuffle(deck)
   end
 
