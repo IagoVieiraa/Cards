@@ -30,9 +30,6 @@ defmodule Deck do
     end
   end
 
-  # def remove_cards(deck, values) do
-  # end
-
   def shuffle(deck) do
     Enum.shuffle(deck)
   end
