@@ -3,6 +3,8 @@ defmodule Deck do
      Provides methods for creating and hadling a deck of cards
   """
 
+  require Logger
+
   @doc """
   Returns a list of strings representing a deck of playing cards
   """
@@ -34,6 +36,7 @@ defmodule Deck do
   # end
 
   def shuffle(deck) do
+    Logger.info("Shuffling the deck")
     Enum.shuffle(deck)
   end
 
