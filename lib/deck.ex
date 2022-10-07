@@ -3,9 +3,8 @@ defmodule Deck do
      Provides methods for creating and hadling a deck of cards
   """
 
-  @doc """
-  Returns a list of strings representing a deck of playing cards
-  """
+  require logger
+
   def new() do
     values = [
       :ace,
@@ -35,10 +34,12 @@ defmodule Deck do
   end
 
   def deal(deck, hand_size) do
+    Logger.info("Entregando cartas")
     Enum.split(deck, hand_size)
   end
 
   def turn(deck) do
+    Logger.info("Virar carta")
     deck_length = Enum.count(deck)
     size = :rand.uniform(deck_length - 1)
     {top, bottom} = Enum.split(deck, size)
